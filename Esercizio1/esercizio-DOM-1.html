@@ -13,7 +13,18 @@
         <li>2</li>
         <li>3</li>
     </ul>
-    <script src="esercizio-DOM-1.js" type="module"></script>
+    <script>
+        const ul = document.querySelector("ul");
+        const secondoFiglioUl = ul.children[1];
+
+        console.log(ul.parentElement);
+
+        console.log(ul.children[1]);
+
+        console.log(secondoFiglioUl.nextElementSibling);
+                
+        console.log(secondoFiglioUl.previousElementSibling);
+    </script>
 </body>
 
 </html>

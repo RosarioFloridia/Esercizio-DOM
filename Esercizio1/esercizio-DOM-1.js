@@ -1,10 +1,10 @@
 const ul = document.querySelector("ul");
-        const secondoFiglioUl = ul.children[1];
+const secondoFiglioUl = ul.children[1];
 
-        console.log(ul.parentElement);
+console.log(ul.parentElement);
 
-        console.log(ul.children[1]);
+console.log(ul.children[1]);
 
-        console.log(secondoFiglioUl.nextElementSibling);
+console.log(secondoFiglioUl.nextElementSibling);
         
-        console.log(secondoFiglioUl.previousElementSibling);
+console.log(secondoFiglioUl.previousElementSibling);
