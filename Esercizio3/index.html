@@ -13,6 +13,17 @@
         <button class="btn" onclick="addProduct()">Aggiungi</button>
         <ul class="list-items"></ul>
         </div>
-        <script src="./index.js"></script>
+        <script>             
+            const lista = document.querySelector(".list-items");
+
+            function addProduct() {
+                const valore = document.getElementById("testoToDo").value;
+                const li = document.createElement("li");
+
+                li.innerHTML = `<input type="checkbox">${valore}`
+                lista.appendChild(li);
+                document.getElementById("testoToDo").value = "";
+            }
+        </script>
     </body>
   </html>
