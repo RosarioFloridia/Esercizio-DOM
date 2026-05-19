@@ -1,8 +1,8 @@
 
 const button = document.querySelector(".btn")
 
-//Read the Local Storage
-const savedData = JSON.parse(localStorage.getItem("data"))
+//Read the Session Storage
+const savedData = JSON.parse(sessionStorage.getItem("data"))
 
 //Render the title getting the name of the Object "user"
 function renderTitle(user) {
@@ -22,7 +22,7 @@ function renderData(user){
             </ul>`
 }
 
-//Get the data from the form and create a object called "user" and saves it inside the Local Storage
+//Get the data from the form and create a object called "user", and saves it inside the Session Storage
 function getData() {
     const dataEmail = document.querySelector(".email").value;
     const dataFirstName = document.querySelector(".firstname").value;
@@ -34,7 +34,7 @@ function getData() {
         lastName: dataLastName
     };
 
-    localStorage.setItem("data", JSON.stringify(user))
+    sessionStorage.setItem("data", JSON.stringify(user))
 
     renderTitle(user);
     renderData(user)
@@ -46,7 +46,7 @@ button.addEventListener("click", () => {
     getData()
 })
 
-//check if datas are inside the Local Storage 
+//check if datas are inside the Session Storage 
 if (savedData){
     renderTitle(savedData)
     renderData(savedData)
