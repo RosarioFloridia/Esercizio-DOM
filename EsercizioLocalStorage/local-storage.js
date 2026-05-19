@@ -15,7 +15,7 @@ function renderData(user){
     const printedForm = document.querySelector(".printedform")
 
     return printedForm.innerHTML = `
-            </ul>
+            <ul>
                 <li>Email: ${user.email}</li>
                 <li>First name: ${user.firstName}</li>
                 <li>Last name: ${user.lastName}</li>
